@@ -897,6 +897,7 @@ mod tests {
 
             let overflow_bit_lengths =
                 rns::<W, N, NUMBER_OF_LIMBS, BIT_LEN_LIMB>().overflow_lengths();
+            println!("overflow_bit_length of rns: {:?}", overflow_bit_lengths);
             let range_config =
                 RangeChip::<N>::configure(meta, &main_gate_config, overflow_bit_lengths);
 
